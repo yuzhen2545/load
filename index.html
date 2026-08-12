@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>午後迷宮茶會｜資金規劃小測驗</title>
+<style>
+:root{--cream:#fffaf1;--paper:#fffdf8;--berry:#a92f4b;--berry2:#c74f69;--pink:#f6d7dd;--pink2:#fff0f3;--green:#243e35;--gold:#c8a25a;--ink:#3a2c2f;--muted:#836f73;--line:#eadbd4;--shadow:0 18px 50px rgba(78,49,52,.13)}
+*{box-sizing:border-box}body{margin:0;color:var(--ink);background:radial-gradient(circle at 8% 12%,rgba(199,79,105,.12),transparent 25%),radial-gradient(circle at 92% 8%,rgba(36,62,53,.10),transparent 28%),linear-gradient(180deg,#fff9ef 0%,#fdf4ee 55%,#fff9f4 100%);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;min-height:100vh}button,input,select{font:inherit}button{cursor:pointer}.screen{display:none;min-height:100vh;padding:28px 18px 48px}.screen.active{display:block}.shell{max-width:880px;margin:0 auto}.topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;color:var(--green);font-size:12px;font-weight:800;letter-spacing:.08em}.badge{border:1px solid rgba(36,62,53,.18);padding:7px 11px;border-radius:999px;background:rgba(255,255,255,.55)}.card{background:rgba(255,253,248,.96);border:1px solid rgba(169,47,75,.13);border-radius:28px;box-shadow:var(--shadow);overflow:hidden}.hero{position:relative;padding:38px 34px 28px;text-align:center;min-height:690px}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(36,62,53,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(36,62,53,.045) 1px,transparent 1px);background-size:46px 46px;mask-image:linear-gradient(to bottom,#000,transparent 70%);pointer-events:none}.kicker{display:inline-flex;align-items:center;gap:8px;color:var(--berry);font-size:12px;font-weight:900;letter-spacing:.16em}h1{font-size:clamp(34px,7vw,60px);line-height:1.12;margin:14px 0 12px;color:var(--green)}.hero p{max-width:620px;margin:0 auto;color:var(--muted);line-height:1.85;font-size:15px}.story{max-width:610px;margin:26px auto 0;padding:18px 20px;border:1px solid var(--line);background:rgba(255,255,255,.66);border-radius:18px;text-align:left;line-height:1.8;font-size:14px}.ticket-row{margin:22px auto 0;display:flex;justify-content:center;gap:10px;flex-wrap:wrap}.ticket{display:flex;align-items:center;gap:8px;background:#fff;border:1px dashed #d9b3bc;border-radius:14px;padding:10px 13px;color:#74424d;font-size:12px;font-weight:800}.ticket b{color:var(--berry);font-size:14px}.primary{border:0;background:linear-gradient(135deg,var(--berry),var(--berry2));color:#fff;font-weight:900;border-radius:999px;padding:14px 24px;box-shadow:0 10px 24px rgba(169,47,75,.22)}.secondary{border:1px solid #dfbcc4;background:#fff;color:var(--berry);font-weight:900;border-radius:999px;padding:12px 20px}.hero .primary{margin-top:22px;min-width:190px}.ornament-stage{position:relative;height:210px;margin-top:24px}.ornament{position:absolute;background:#fff;border:1px solid var(--line);box-shadow:0 8px 22px rgba(58,44,47,.08)}.teacup{width:92px;height:64px;border-radius:8px 8px 34px 34px;left:10%;top:66px;background:#f8dce1}.teacup:after{content:"";position:absolute;width:30px;height:30px;border:9px solid #f8dce1;border-left-color:transparent;border-radius:50%;right:-27px;top:12px}.watch{width:88px;height:88px;border-radius:50%;right:12%;top:22px;border:5px solid var(--gold);background:#fffdf5}.watch:before{content:"";position:absolute;width:3px;height:25px;background:var(--green);left:42px;top:19px;transform-origin:bottom;transform:rotate(18deg)}.watch:after{content:"";position:absolute;width:3px;height:20px;background:var(--berry);left:42px;top:25px;transform-origin:bottom;transform:rotate(120deg)}.key{position:absolute;width:108px;height:12px;background:var(--gold);left:39%;top:110px;border-radius:999px;transform:rotate(-11deg)}.key:before{content:"";position:absolute;width:34px;height:34px;border:8px solid var(--gold);border-radius:50%;left:-26px;top:-11px}.key:after{content:"";position:absolute;width:18px;height:25px;border-right:7px solid var(--gold);border-bottom:7px solid var(--gold);right:9px;top:1px}.rabbit{position:absolute;width:54px;height:74px;border-radius:40% 40% 44% 44%;background:var(--green);right:42%;top:35px;opacity:.92}.rabbit:before,.rabbit:after{content:"";position:absolute;width:17px;height:48px;background:var(--green);border-radius:70% 70% 25% 25%;top:-35px}.rabbit:before{left:7px;transform:rotate(-7deg)}.rabbit:after{right:7px;transform:rotate(7deg)}.note{font-size:11px;color:#a0878d;margin-top:12px}.question-card{padding:26px}.progress{display:flex;gap:7px;margin:10px 0 22px}.dot{height:6px;flex:1;border-radius:999px;background:#eadbd4}.dot.on{background:var(--berry)}.chapter{font-size:12px;color:var(--berry);font-weight:900;letter-spacing:.08em}.qtitle{font-size:26px;line-height:1.35;margin:10px 0 6px;color:var(--green)}.qdesc{color:var(--muted);line-height:1.7;margin-bottom:18px}.options{display:grid;gap:11px}.option{width:100%;text-align:left;border:1px solid var(--line);background:#fff;border-radius:17px;padding:14px 15px;display:flex;gap:12px;align-items:flex-start;color:var(--ink);transition:.16s}.option:hover{transform:translateY(-1px);border-color:#d5a7b2;background:#fffafb}.letter{width:28px;height:28px;border-radius:50%;background:var(--pink2);color:var(--berry);display:grid;place-items:center;font-size:12px;font-weight:900;flex:none}.option strong{display:block;font-size:14px;line-height:1.6}.mini-scene{margin:18px 0;padding:13px 15px;border-radius:15px;background:#f8f3e9;border:1px solid #ede1cd;color:#675b4c;font-size:12px;line-height:1.7}.result-card{padding:30px}.result-kicker{color:var(--berry);font-size:12px;font-weight:900;letter-spacing:.12em}.result-title{font-size:38px;color:var(--green);font-weight:950;margin:8px 0}.quote{display:inline-block;padding:9px 13px;background:var(--pink2);border-radius:12px;color:#7b3546;font-weight:800;margin-bottom:16px}.result-desc{line-height:1.9;color:#6f5a5f;max-width:720px}.tags{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0 20px}.tag{padding:7px 10px;border-radius:999px;background:#f7efe9;color:#715f57;font-size:12px;font-weight:800}.reward-panel{border:1px dashed #d7aab5;border-radius:18px;padding:16px;margin:20px 0;background:#fff8f9}.reward-panel strong{color:var(--berry)}.cta-panel{border-radius:20px;background:linear-gradient(135deg,#eef4ef,#fffdf8);border:1px solid #d7e2db;padding:20px;margin-top:18px}.cta-panel h3{margin:0 0 7px;color:var(--green)}.cta-panel p{margin:0 0 14px;color:#6f756f;line-height:1.7;font-size:13px}.calc-card{padding:28px}.calc-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px}.calc-head h2{font-size:32px;color:var(--green);margin:0 0 6px}.calc-head p{margin:0;color:var(--muted);line-height:1.7}.reward-chip{white-space:nowrap;background:#fff0f3;border:1px solid #e5bdc6;color:var(--berry);font-weight:900;padding:8px 11px;border-radius:999px;font-size:12px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}.field{background:#fff;border:1px solid var(--line);border-radius:16px;padding:13px}.field label{display:block;font-size:12px;font-weight:900;color:#7e4c58;margin-bottom:7px}.field input,.field select{width:100%;border:0;outline:0;background:transparent;color:var(--ink);font-weight:800}.calc-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.calc-result{margin-top:18px;padding:18px;border-radius:18px;background:#fff7f1;border:1px solid #f0d9c9;display:none}.calc-result.show{display:block}.big-number{font-size:34px;color:var(--berry);font-weight:950}.calc-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}.meta{padding:11px;border-radius:12px;background:#fff;border:1px solid var(--line)}.meta small{display:block;color:#9a8287;margin-bottom:3px}.meta b{color:var(--green)}.disclaimer{margin-top:14px;font-size:11px;color:#9a8589;line-height:1.7}.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(20px);background:#243e35;color:#fff;padding:10px 15px;border-radius:999px;font-size:12px;opacity:0;pointer-events:none;transition:.2s;z-index:20}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@media(max-width:700px){.screen{padding:18px 12px 34px}.hero{padding:28px 18px 20px;min-height:650px}.question-card,.result-card,.calc-card{padding:20px}.qtitle{font-size:22px}.result-title{font-size:31px}.form-grid{grid-template-columns:1fr}.calc-head{flex-direction:column}.calc-meta{grid-template-columns:1fr}.ornament-stage{height:180px}}
+
+/* ===== Cute Wonderland v2 ===== */
+:root{
+  --cream:#fffaf3;
+  --paper:#fffefa;
+  --berry:#b94b69;
+  --berry2:#d86e87;
+  --pink:#f6ced9;
+  --pink2:#fff0f5;
+  --green:#35584d;
+  --green2:#5f7e70;
+  --mint:#dfeee6;
+  --sky:#dceff3;
+  --blue:#8cb9c6;
+  --gold:#d5ad58;
+  --lav:#e8dff2;
+  --ink:#49373d;
+  --muted:#8a7279;
+  --line:#ead9d5;
+  --shadow:0 18px 55px rgba(103,63,75,.14);
+}
+
+body{
+  background:
+    radial-gradient(circle at 8% 7%, rgba(236,174,192,.30), transparent 22%),
+    radial-gradient(circle at 90% 10%, rgba(174,220,222,.27), transparent 24%),
+    radial-gradient(circle at 84% 88%, rgba(228,213,239,.33), transparent 26%),
+    linear-gradient(180deg,#fffaf5 0%,#fff6f5 45%,#fbf8f1 100%);
+}
+
+.screen{
+  position:relative;
+  overflow:hidden;
+}
+
+.screen:before,
+.screen:after{
+  content:"";
+  position:fixed;
+  z-index:-1;
+  border-radius:50%;
+  filter:blur(0);
+  opacity:.42;
+}
+.screen:before{
+  width:240px;height:240px;
+  left:-95px;bottom:10%;
+  background:radial-gradient(circle,#f4cfd9 0 34%,transparent 35%);
+}
+.screen:after{
+  width:230px;height:230px;
+  right:-85px;top:14%;
+  background:radial-gradient(circle,#dceee6 0 34%,transparent 35%);
+}
+
+.topbar{
+  color:var(--berry);
+}
+.badge{
+  border-color:#e8c2cc;
+  background:#fff8fb;
+  color:#9a5366;
+}
+
+.card{
+  border-radius:34px;
+  border:1px solid #efd9de;
+  box-shadow:0 22px 60px rgba(108,73,83,.15);
+  position:relative;
+}
+
+.card:before{
+  content:"";
+  position:absolute;
+  pointer-events:none;
+  inset:8px;
+  border:1px dashed rgba(185,75,105,.12);
+  border-radius:27px;
+}
+
+/* scalloped paper feeling */
+.hero,
+.question-card,
+.result-card,
+.calc-card{
+  background:
+    radial-gradient(circle at 12px 0,#fffefa 12px,transparent 13px) 0 0/24px 14px repeat-x,
+    linear-gradient(180deg,#fffefa,#fffaf7);
+}
+
+.hero{
+  min-height:730px;
+  padding-top:46px;
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  width:130px;height:130px;
+  right:-42px;bottom:-42px;
+  background:
+    linear-gradient(45deg,#f4cfdb 25%,transparent 25%) 0 0/28px 28px,
+    linear-gradient(-45deg,#f4cfdb 25%,transparent 25%) 0 14px/28px 28px,
+    linear-gradient(45deg,transparent 75%,#f4cfdb 75%) 14px -14px/28px 28px,
+    linear-gradient(-45deg,transparent 75%,#f4cfdb 75%) -14px 0/28px 28px;
+  opacity:.22;
+  transform:rotate(12deg);
+  border-radius:28px;
+}
+
+.kicker{
+  background:#fff4f7;
+  border:1px solid #ecc8d1;
+  border-radius:999px;
+  padding:8px 13px;
+  letter-spacing:.13em;
+}
+
+h1{
+  color:#31554a;
+  text-shadow:0 2px 0 #fff,0 4px 18px rgba(53,88,77,.08);
+}
+
+.story{
+  background:linear-gradient(180deg,#fff,#fff9f5);
+  border:1px solid #ead7cf;
+  box-shadow:0 8px 20px rgba(89,62,70,.06);
+  position:relative;
+}
+.story:before{
+  content:"";
+  position:absolute;
+  top:-8px;left:36px;
+  width:55px;height:16px;
+  background:#f2cad5;
+  opacity:.72;
+  transform:rotate(-3deg);
+}
+
+.ticket{
+  background:linear-gradient(180deg,#fff,#fff8fa);
+  border:1px dashed #dfa8b6;
+  box-shadow:0 5px 12px rgba(169,76,99,.07);
+}
+.ticket:nth-child(2){
+  border-color:#b8d3c6;
+  background:#f7fcf8;
+  color:#4a7464;
+}
+.ticket:nth-child(2) b{color:#4f7e6c}
+
+.primary{
+  background:linear-gradient(135deg,#b84b69,#d76f86);
+  box-shadow:0 12px 26px rgba(185,75,105,.23);
+  border:2px solid rgba(255,255,255,.72);
+}
+.primary:hover{
+  transform:translateY(-1px) rotate(-.2deg);
+}
+
+.secondary{
+  background:#fff8fb;
+  border-color:#e6bbc6;
+}
+
+/* whimsical tea-party scene */
+.ornament-stage{
+  height:250px;
+  margin-top:18px;
+}
+.ornament-stage:before{
+  content:"";
+  position:absolute;
+  left:7%;right:7%;bottom:16px;height:56px;
+  border-radius:50%;
+  background:
+    linear-gradient(90deg,rgba(137,185,198,.14) 25%,transparent 25% 50%,rgba(137,185,198,.14) 50% 75%,transparent 75%) 0 0/34px 34px,
+    #fff6ef;
+  border:1px solid #ead9d2;
+  transform:perspective(320px) rotateX(62deg);
+}
+.teacup{
+  width:104px;height:70px;left:9%;top:93px;
+  background:linear-gradient(180deg,#f8d1de,#f2bfcf);
+  border:2px solid #fff;
+  transform:rotate(-5deg);
+}
+.teacup:before{
+  content:"";
+  position:absolute;left:13px;right:13px;top:9px;height:9px;
+  border-radius:50%;background:#fff8f3;opacity:.85;
+}
+.teacup:after{border-color:#f2bfcf;border-left-color:transparent}
+.watch{
+  right:10%;top:28px;
+  background:radial-gradient(circle,#fffdf7 0 58%,#f8efd8 59% 100%);
+  box-shadow:0 0 0 5px #f8edcf,0 8px 18px rgba(80,60,50,.10);
+}
+.watch span{display:none}
+.key{top:143px;left:42%;background:#dfb659}
+.rabbit{
+  background:#47695d;
+  right:42%;top:48px;
+  box-shadow:0 8px 18px rgba(53,88,77,.14);
+}
+.rabbit:before,.rabbit:after{background:#47695d}
+
+/* decorative mini props */
+.wonder-card{
+  position:absolute;width:54px;height:74px;border-radius:10px;background:#fff;
+  border:1px solid #eadad4;box-shadow:0 7px 16px rgba(70,50,55,.08);
+}
+.wonder-card.one{left:22%;top:35px;transform:rotate(-13deg)}
+.wonder-card.two{right:24%;top:108px;transform:rotate(10deg)}
+.wonder-card:before{
+  content:"♥";position:absolute;left:8px;top:5px;color:#c85370;font-size:20px;font-weight:900
+}
+.wonder-card.two:before{content:"♣";color:#4f7567}
+.tiny-cake{
+  position:absolute;left:30%;bottom:32px;width:72px;height:46px;
+  background:#f8d6df;border-radius:10px 10px 16px 16px;border:2px solid #fff;
+  box-shadow:0 7px 16px rgba(110,68,80,.08)
+}
+.tiny-cake:before{
+  content:"";position:absolute;left:8px;right:8px;top:-11px;height:18px;
+  background:#fff2e7;border-radius:50%;
+}
+.tiny-cake:after{
+  content:"EAT ME";position:absolute;left:11px;top:15px;color:#9f5368;font-size:9px;font-weight:900;letter-spacing:.08em
+}
+
+/* questions */
+.question-card{
+  padding:30px;
+}
+.progress{
+  gap:9px;
+}
+.dot{
+  height:8px;background:#eee1de;
+  box-shadow:inset 0 1px 2px rgba(80,50,60,.06);
+}
+.dot.on{
+  background:linear-gradient(90deg,#d46d86,#b94b69);
+}
+.chapter{
+  display:inline-block;
+  background:#fff1f5;
+  border:1px solid #ebc7d0;
+  padding:7px 10px;border-radius:999px;
+}
+.qtitle{
+  color:#35584d;
+  font-size:28px;
+}
+.mini-scene{
+  background:
+    linear-gradient(135deg,rgba(223,238,230,.72),rgba(255,247,241,.95));
+  border-color:#d9e2d8;
+  position:relative;
+  padding-left:44px;
+}
+.mini-scene:before{
+  content:"";
+  position:absolute;left:15px;top:50%;transform:translateY(-50%);
+  width:17px;height:17px;border:3px solid #d0a652;border-radius:50%;
+  box-shadow:7px 0 0 -5px #d0a652;
+}
+.option{
+  border-radius:20px;
+  background:linear-gradient(180deg,#fff,#fffafa);
+  padding:15px 16px;
+  box-shadow:0 5px 14px rgba(78,50,60,.035);
+}
+.option:nth-child(2n){
+  background:linear-gradient(180deg,#fff,#f9fcfa);
+}
+.option:hover{
+  border-color:#d7a6b5;
+  background:#fff6f9;
+  box-shadow:0 8px 18px rgba(169,75,101,.09);
+}
+.letter{
+  background:linear-gradient(145deg,#f9d7e0,#fff0f4);
+  border:1px solid #e8bdc8;
+}
+
+/* result */
+.result-card{
+  background:
+    radial-gradient(circle at 86% 12%,rgba(220,239,242,.52),transparent 21%),
+    radial-gradient(circle at 11% 83%,rgba(246,206,217,.52),transparent 24%),
+    linear-gradient(180deg,#fffefa,#fffaf7);
+}
+.result-kicker{
+  display:inline-block;padding:7px 10px;border-radius:999px;
+  background:#fff0f4;border:1px solid #ebc4ce
+}
+.result-title{
+  color:#35584d;
+}
+.quote{
+  background:linear-gradient(135deg,#fff1f5,#f7eef8);
+  border:1px solid #ebd4e1;
+}
+.tag{
+  background:#f5efe9;
+  border:1px solid #eadfd7;
+}
+.reward-panel{
+  background:
+    linear-gradient(135deg,rgba(255,242,246,.95),rgba(255,251,242,.98));
+  position:relative;
+}
+.reward-panel:after{
+  content:"✦";position:absolute;right:18px;top:14px;color:#d7aa55;font-size:18px
+}
+.cta-panel{
+  background:
+    radial-gradient(circle at 90% 15%,rgba(220,239,242,.7),transparent 30%),
+    linear-gradient(135deg,#f2f8f4,#fffaf6);
+  border-color:#ccded3;
+}
+
+/* calculator */
+.calc-card{
+  background:
+    radial-gradient(circle at 95% 5%,rgba(232,223,242,.55),transparent 25%),
+    linear-gradient(180deg,#fffefa,#fffaf7);
+}
+.reward-chip{
+  background:#fff0f4;border-color:#e7bec8;
+}
+.field{
+  border-radius:18px;
+  box-shadow:0 5px 14px rgba(70,50,55,.035);
+}
+.calc-result{
+  background:linear-gradient(135deg,#fff7f0,#fff1f5);
+}
+
+/* little top corner ornaments on content cards */
+.question-card:after,
+.result-card:after,
+.calc-card:after{
+  content:"";
+  position:absolute;right:22px;top:16px;width:58px;height:34px;
+  background:
+    radial-gradient(circle at 8px 8px,#d9ad59 0 4px,transparent 5px),
+    radial-gradient(circle at 30px 17px,#d6a0b0 0 5px,transparent 6px),
+    radial-gradient(circle at 50px 7px,#8fbcb0 0 4px,transparent 5px);
+  opacity:.65;
+}
+
+@media(max-width:700px){
+  .hero{min-height:700px}
+  .ornament-stage{height:220px}
+  .wonder-card.one{left:18%}
+  .wonder-card.two{right:18%}
+  .tiny-cake{left:27%}
+}
+
+</style>
+</head>
+<body>
+<div id="startScreen" class="screen active"><div class="shell"><div class="topbar"><div>AFTERNOON MAZE TEA PARTY</div><div class="badge">一場關於選擇的午後小測驗</div></div><div class="card hero"><div class="kicker">✦ YOU'RE INVITED ✦</div><h1>你收到了一封<br>奇怪的茶會邀請函</h1><p>下午三點以前，跟著懷錶、鑰匙和歪歪的路標穿過迷宮，找到屬於你的茶會座位吧。</p><div class="story">某個普通的午後，一隻匆匆忙忙的白兔掉下一封沒有署名的茶會邀請函。<br>「請在下午三點以前抵達茶會。別擔心，迷路也是旅程的一部分。」<br><br>有人習慣算清楚再前進，有人只想趕快找到出口，也有人總會替自己留一條備用道路。<br><b>如果是你，會怎麼走完這座迷宮？</b></div><div class="ticket-row"><div class="ticket">完成迷宮小測驗 <b>35 POINTS</b></div><div class="ticket">完成 1 分鐘快速試算 <b>再享 35 POINTS</b></div></div><button class="primary" id="startBtn">收下邀請函，跟著白兔出發</button><div class="note">Prototype 示意｜實際回饋資格、名額與活動期間以正式公告為準</div><div class="ornament-stage" aria-hidden="true"><div class="ornament teacup"></div><div class="ornament watch"></div><div class="key"></div><div class="rabbit"></div></div></div></div></div>
+<div id="questionScreen" class="screen"><div class="shell"><div class="topbar"><div>MAZE CHALLENGE</div><div class="badge" id="stepText">1 / 5</div></div><div class="card question-card"><div class="progress" id="progress"></div><div class="chapter" id="chapter"></div><div class="qtitle" id="qtitle"></div><div class="qdesc" id="qdesc"></div><div class="mini-scene" id="miniScene"></div><div class="options" id="options"></div></div></div></div>
+<div id="resultScreen" class="screen"><div class="shell"><div class="topbar"><div>YOU MADE IT TO THE TEA PARTY</div><div class="badge">通關完成</div></div><div class="card result-card"><div class="result-kicker">你的資金規劃風格是——</div><div class="result-title" id="resultTitle"></div><div class="quote" id="resultQuote"></div><div class="result-desc" id="resultDesc"></div><div class="tags" id="resultTags"></div><div class="reward-panel">🎟️ <strong>恭喜完成迷宮小測驗！</strong><br>已取得 LINE POINTS 35 點回饋資格。</div><div class="cta-panel"><h3>既然都走到這裡了，要不要先算算看？</h3><p id="calcLeadText">輸入需求金額與期間，約 1 分鐘看看示意月付結果，不代表正式核貸條件。</p><button class="primary" id="toCalcBtn">解鎖 1 分鐘快速試算</button></div><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px"><button class="secondary" id="restartBtn">再走一次迷宮</button></div></div></div></div>
+<div id="calcScreen" class="screen"><div class="shell"><div class="topbar"><div>ONE-MINUTE QUICK ESTIMATE</div><div class="badge">最後一關</div></div><div class="card calc-card"><div class="calc-head"><div><h2>1 分鐘快速試算</h2><p>先試算看看，快速了解不同金額與期間下的示意月付。</p></div><div class="reward-chip">完成再享 35 POINTS</div></div><div class="form-grid"><div class="field"><label for="purpose">資金用途</label><select id="purpose"><option>居家裝潢／修繕</option><option>進修／學習</option><option>家庭大額支出</option><option>設備／工具購置</option><option>其他資金規劃</option></select></div><div class="field"><label for="amount">希望試算金額（萬元）</label><input id="amount" type="number" min="10" max="300" step="5" value="50"></div><div class="field"><label for="months">預計還款期間</label><select id="months"><option value="24">24 個月</option><option value="36">36 個月</option><option value="48">48 個月</option><option value="60" selected>60 個月</option><option value="72">72 個月</option><option value="84">84 個月</option></select></div><div class="field"><label for="rate">示意年利率（Prototype）</label><select id="rate"><option value="3.5">3.5%</option><option value="5.5" selected>5.5%</option><option value="7.5">7.5%</option><option value="9.5">9.5%</option></select></div></div><div class="calc-actions"><button class="primary" id="calcBtn">查看試算結果</button><button class="secondary" id="backResultBtn">回到我的通關結果</button></div><div class="calc-result" id="calcResult"><div style="font-size:12px;color:#8b6c72;font-weight:900">每月預估還款</div><div class="big-number" id="monthlyPayment">—</div><div class="calc-meta"><div class="meta"><small>試算金額</small><b id="metaAmount">—</b></div><div class="meta"><small>期間</small><b id="metaMonths">—</b></div><div class="meta"><small>示意年利率</small><b id="metaRate">—</b></div></div><div class="reward-panel" style="margin-bottom:0">🎁 <strong>完成 1 分鐘快速試算，再享 35 點回饋資格！</strong></div><div class="disclaimer">本頁僅為活動 Prototype。試算採本息平均攤還公式與使用者選擇之「示意年利率」計算，不代表任何銀行實際核貸利率、額度、費用或授信結果；正式條件仍應依個別審核與活動公告為準。</div></div></div></div></div>
+<div id="toast" class="toast"></div>
+<script>
+const questions=[
+{chapter:"第一關｜會說悄悄話的五把鑰匙",title:"迷宮入口就在眼前，但時間有限。",desc:"如果只能先確認一件事，你最想知道什麼？",scene:"門上沒有任何提示，只有一張小紙條：『選一把最像你的鑰匙。』",options:[["哪條路走起來最不累，不會讓後面的自己太辛苦","BURDEN"],["哪條路最不容易後悔","COST"],["哪條路最快抵達茶會","SPEED"],["哪條路中途還可以改變方向","FLEX"],["有沒有人能先告訴我每條路差在哪","GUIDE"]]},
+{chapter:"第二關｜白兔的懷錶突然倒數",title:"「茶會快開始了！」",desc:"懷錶突然開始倒數，你最可能怎麼做？",scene:"秒針越走越快，前方同時出現五條岔路。",options:[["先算算自己還剩多少時間，再決定怎麼走","BURDEN"],["多看幾條路，找到最划算的走法","COST"],["先衝再說","SPEED"],["先選一條可以隨時回來的路","FLEX"],["找附近的人問哪一條比較適合","GUIDE"]]},
+{chapter:"第三關｜寫著 EAT ME 的下午茶桌",title:"你掉進一張超可愛的下午茶桌！",desc:"桌上的下午茶只能選一份，你第一眼最想拿哪個？",scene:"茶壺冒著熱氣，旁邊的卡片寫著：『每個選擇，都藏著你在意的事。』",options:[["份量剛剛好的套餐","BURDEN"],["CP 值最高、內容最豐富的套餐","COST"],["現在就能直接拿走的甜點","SPEED"],["甜點和飲料都能自由替換的下午茶組","FLEX"],["請店員直接推薦","GUIDE"]]},
+{chapter:"第四關｜變得忽大忽小的神秘小門",title:"門旁只有一張不完整的說明卡。",desc:"如果一定要多補上一項資訊，你最希望知道什麼？",scene:"門把已經握在手上，但你還差最後一點資訊才會安心。",options:[["走進去之後，會不會讓我很累","BURDEN"],["這條路會讓我失去甚麼","COST"],["大概多久可以走到出口","SPEED"],["中途可不可以換另一條路","FLEX"],["如果迷路，可以找誰幫忙","GUIDE"]]},
+{chapter:"Final｜紅玫瑰茶會就在門後",title:"最後一把金色鑰匙，終於轉開了茶會大門。",desc:"如果眼前有一個簡單工具，可以先幫你把條件算清楚，你最可能怎麼做？",scene:"桌上放著最後一張卡：『真正適合你的路，往往從知道自己在意什麼開始。』",options:[["先看看大概要負擔多少","BURDEN"],["先比較各項得失，再決定值不值得","COST"],["如果很簡單就能完成，我會直接試試看","SPEED"],["我會調整看看，多試幾次","FLEX"],["如果看完還有問題，希望有人可以解釋","GUIDE"]]}
+];
+const profiles={BURDEN:{title:"輕鬆負擔型茶會旅人",quote:"「每一步都要走得舒服，才走得長久。」",desc:"你做決定時，最在意的是不要讓未來的自己壓力太大。比起一次解決所有事情，你更希望先確認每個月需要承擔多少，再找到能維持生活節奏的方式。",tags:["#在意每月負擔","#先算再決定","#生活節奏很重要"],lead:"既然你最在意每月負擔，不妨先看看不同金額與期間下的示意月付。"},COST:{title:"精算規劃型茶會旅人",quote:"「數字先算清楚，我才能放心做決定。」",desc:"你不太喜歡憑感覺做重要決定。整體成本、利率與每一項條件是否划算，都是你會仔細比較的地方。知道自己正在付出什麼，會讓你更安心。",tags:["#重視利率","#總成本要透明","#精打細算"],lead:"既然你習慣先比較成本，不妨先用示意利率試算不同金額與期間的結果。"},SPEED:{title:"效率行動型茶會旅人",quote:"「事情來了，就希望快點找到出口。」",desc:"你重視效率，也不喜歡讓事情一直卡著。當需求真的出現時，清楚、快速、步驟少的流程會比複雜的資訊更吸引你。",tags:["#重視效率","#流程越簡單越好","#行動派"],lead:"如果你喜歡快速得到答案，這個 1 分鐘試算可以先幫你掌握大概的月付範圍。"},FLEX:{title:"彈性自主型茶會旅人",quote:"「今天做決定，也要替明天留一條路。」",desc:"你喜歡自己掌握選擇，不希望一開始就把路走死。對你來說，可以調整金額、期間與安排方式，往往比單一最便宜的選項更重要。",tags:["#重視彈性","#保留選擇","#自己掌握節奏"],lead:"你可以在試算頁自由切換金額與期間，看看不同安排對每月負擔的影響。"},GUIDE:{title:"安心確認型茶會旅人",quote:"「先弄清楚，再做決定。」",desc:"你不是不願意做決定，而是希望資訊足夠清楚。當條件比較複雜時，有人可以把差異說明白、讓你知道下一步會發生什麼，會讓你安心很多。",tags:["#資訊要清楚","#需要安心感","#有人說明更好"],lead:"先用試算掌握基本數字，再決定要不要進一步了解，會比較符合你的節奏。"}};
+let current=0,scores={BURDEN:0,COST:0,SPEED:0,FLEX:0,GUIDE:0},answerKeys=[],winner="COST";const $=id=>document.getElementById(id);
+function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));$(id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
+function toast(msg){$('toast').textContent=msg;$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),1800)}
+function renderQuestion(){const q=questions[current];$('stepText').textContent=`${current+1} / ${questions.length}`;$('chapter').textContent=q.chapter;$('qtitle').textContent=q.title;$('qdesc').textContent=q.desc;$('miniScene').textContent=q.scene;$('progress').innerHTML='';questions.forEach((_,i)=>{const d=document.createElement('div');d.className='dot'+(i<=current?' on':'');$('progress').appendChild(d)});$('options').innerHTML='';q.options.forEach((op,i)=>{const btn=document.createElement('button');btn.className='option';btn.innerHTML=`<span class="letter">${String.fromCharCode(65+i)}</span><div><strong>${op[0]}</strong></div>`;btn.onclick=()=>choose(op[1]);$('options').appendChild(btn)})}
+function choose(key){scores[key]++;answerKeys.push(key);current++;if(current<questions.length)renderQuestion();else showResult()}
+function showResult(){const max=Math.max(...Object.values(scores)),tied=Object.keys(scores).filter(k=>scores[k]===max);winner=tied.length===1?tied[0]:([...answerKeys].reverse().find(k=>tied.includes(k))||tied[0]);const p=profiles[winner];$('resultTitle').textContent=p.title;$('resultQuote').textContent=p.quote;$('resultDesc').textContent=p.desc;$('resultTags').innerHTML='';p.tags.forEach(t=>{const s=document.createElement('span');s.className='tag';s.textContent=t;$('resultTags').appendChild(s)});$('calcLeadText').textContent=p.lead+' 完成快速試算可再享 LINE POINTS 35 點。';show('resultScreen');toast('迷宮通關！已取得 35 點回饋資格')}
+function reset(){current=0;scores={BURDEN:0,COST:0,SPEED:0,FLEX:0,GUIDE:0};answerKeys=[];show('startScreen')}
+function calcPayment(){const amountWan=Number($('amount').value),months=Number($('months').value),annual=Number($('rate').value);if(!amountWan||amountWan<10){toast('請輸入至少 10 萬元的試算金額');return}const principal=amountWan*10000,r=annual/100/12,payment=r===0?principal/months:principal*r*Math.pow(1+r,months)/(Math.pow(1+r,months)-1);$('monthlyPayment').textContent=`NT$ ${Math.round(payment).toLocaleString('zh-TW')}`;$('metaAmount').textContent=`${amountWan.toLocaleString('zh-TW')} 萬元`;$('metaMonths').textContent=`${months} 個月`;$('metaRate').textContent=`${annual.toFixed(1)}%`;$('calcResult').classList.add('show');toast('快速試算完成！已取得再享 35 點回饋資格')}
+$('startBtn').onclick=()=>{current=0;scores={BURDEN:0,COST:0,SPEED:0,FLEX:0,GUIDE:0};answerKeys=[];renderQuestion();show('questionScreen')};$('restartBtn').onclick=reset;$('toCalcBtn').onclick=()=>show('calcScreen');$('backResultBtn').onclick=()=>show('resultScreen');$('calcBtn').onclick=calcPayment;
+</script>
+</body>
+</html>
