@@ -370,13 +370,100 @@ h1{
   .tiny-cake{left:27%}
 }
 
+
+/* ===== Wonderland Final Bonus：完成申請並核貸，再抽大獎 ===== */
+.grand-prize-card{
+  margin-top:16px;
+  padding:18px 18px;
+  border-radius:20px;
+  border:1px dashed #d5ad58;
+  background:
+    radial-gradient(circle at 92% 16%, rgba(255,231,166,.55), transparent 28%),
+    linear-gradient(135deg,#fffaf0,#fff3f7);
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 7px 18px rgba(132,92,42,.06);
+}
+
+.grand-prize-card::before{
+  content:"";
+  position:absolute;
+  width:92px;
+  height:92px;
+  right:-24px;
+  bottom:-30px;
+  border-radius:50%;
+  background:rgba(213,173,88,.13);
+}
+
+.grand-prize-card::after{
+  content:"✦";
+  position:absolute;
+  right:22px;
+  top:15px;
+  color:#d5ad58;
+  font-size:20px;
+}
+
+.grand-prize-eyebrow{
+  color:#9a6a25;
+  font-size:11px;
+  font-weight:950;
+  letter-spacing:.12em;
+  margin-bottom:6px;
+}
+
+.grand-prize-title{
+  color:#6f4a23;
+  font-size:17px;
+  font-weight:950;
+  line-height:1.55;
+  padding-right:24px;
+}
+
+.grand-prize-text{
+  color:#866b57;
+  font-size:12px;
+  line-height:1.75;
+  margin-top:6px;
+  max-width:680px;
+}
+
+.grand-prize-badge{
+  display:inline-block;
+  margin-top:10px;
+  padding:7px 11px;
+  border-radius:999px;
+  background:#fff;
+  border:1px solid #ead4a4;
+  color:#9b702b;
+  font-size:11.5px;
+  font-weight:900;
+}
+
 </style>
 </head>
 <body>
 <div id="startScreen" class="screen active"><div class="shell"><div class="topbar"><div>AFTERNOON MAZE TEA PARTY</div><div class="badge">一場關於選擇的午後小測驗</div></div><div class="card hero"><div class="kicker">✦ YOU'RE INVITED ✦</div><h1>你收到了一封<br>奇怪的茶會邀請函</h1><p>下午三點以前，跟著懷錶、鑰匙和歪歪的路標穿過迷宮，找到屬於你的茶會座位吧。</p><div class="story">某個普通的午後，一隻匆匆忙忙的白兔掉下一封沒有署名的茶會邀請函。<br>「請在下午三點以前抵達茶會。別擔心，迷路也是旅程的一部分。」<br><br>有人習慣算清楚再前進，有人只想趕快找到出口，也有人總會替自己留一條備用道路。<br><b>如果是你，會怎麼走完這座迷宮？</b></div><div class="ticket-row"><div class="ticket">完成迷宮小測驗 <b>35 POINTS</b></div><div class="ticket">完成 1 分鐘快速試算 <b>再享 35 POINTS</b></div></div><button class="primary" id="startBtn">收下邀請函，跟著白兔出發</button><div class="note">Prototype 示意｜實際回饋資格、名額與活動期間以正式公告為準</div><div class="ornament-stage" aria-hidden="true"><div class="ornament teacup"></div><div class="ornament watch"></div><div class="key"></div><div class="rabbit"></div></div></div></div></div>
 <div id="questionScreen" class="screen"><div class="shell"><div class="topbar"><div>MAZE CHALLENGE</div><div class="badge" id="stepText">1 / 5</div></div><div class="card question-card"><div class="progress" id="progress"></div><div class="chapter" id="chapter"></div><div class="qtitle" id="qtitle"></div><div class="qdesc" id="qdesc"></div><div class="mini-scene" id="miniScene"></div><div class="options" id="options"></div></div></div></div>
 <div id="resultScreen" class="screen"><div class="shell"><div class="topbar"><div>YOU MADE IT TO THE TEA PARTY</div><div class="badge">通關完成</div></div><div class="card result-card"><div class="result-kicker">你的資金規劃風格是——</div><div class="result-title" id="resultTitle"></div><div class="quote" id="resultQuote"></div><div class="result-desc" id="resultDesc"></div><div class="tags" id="resultTags"></div><div class="reward-panel">🎟️ <strong>恭喜完成迷宮小測驗！</strong><br>已取得 LINE POINTS 35 點回饋資格。</div><div class="cta-panel"><h3>既然都走到這裡了，要不要先算算看？</h3><p id="calcLeadText">輸入需求金額與期間，約 1 分鐘看看示意月付結果，不代表正式核貸條件。</p><button class="primary" id="toCalcBtn">解鎖 1 分鐘快速試算</button></div><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px"><button class="secondary" id="restartBtn">再走一次迷宮</button></div></div></div></div>
-<div id="calcScreen" class="screen"><div class="shell"><div class="topbar"><div>ONE-MINUTE QUICK ESTIMATE</div><div class="badge">最後一關</div></div><div class="card calc-card"><div class="calc-head"><div><h2>1 分鐘快速試算</h2><p>先試算看看，快速了解不同金額與期間下的示意月付。</p></div><div class="reward-chip">完成再享 35 POINTS</div></div><div class="form-grid"><div class="field"><label for="purpose">資金用途</label><select id="purpose"><option>居家裝潢／修繕</option><option>進修／學習</option><option>家庭大額支出</option><option>設備／工具購置</option><option>其他資金規劃</option></select></div><div class="field"><label for="amount">希望試算金額（萬元）</label><input id="amount" type="number" min="10" max="300" step="5" value="50"></div><div class="field"><label for="months">預計還款期間</label><select id="months"><option value="24">24 個月</option><option value="36">36 個月</option><option value="48">48 個月</option><option value="60" selected>60 個月</option><option value="72">72 個月</option><option value="84">84 個月</option></select></div><div class="field"><label for="rate">示意年利率（Prototype）</label><select id="rate"><option value="3.5">3.5%</option><option value="5.5" selected>5.5%</option><option value="7.5">7.5%</option><option value="9.5">9.5%</option></select></div></div><div class="calc-actions"><button class="primary" id="calcBtn">查看試算結果</button><button class="secondary" id="backResultBtn">回到我的通關結果</button></div><div class="calc-result" id="calcResult"><div style="font-size:12px;color:#8b6c72;font-weight:900">每月預估還款</div><div class="big-number" id="monthlyPayment">—</div><div class="calc-meta"><div class="meta"><small>試算金額</small><b id="metaAmount">—</b></div><div class="meta"><small>期間</small><b id="metaMonths">—</b></div><div class="meta"><small>示意年利率</small><b id="metaRate">—</b></div></div><div class="reward-panel" style="margin-bottom:0">🎁 <strong>完成 1 分鐘快速試算，再享 35 點回饋資格！</strong></div><div class="disclaimer">本頁僅為活動 Prototype。試算採本息平均攤還公式與使用者選擇之「示意年利率」計算，不代表任何銀行實際核貸利率、額度、費用或授信結果；正式條件仍應依個別審核與活動公告為準。</div></div></div></div></div>
+<div id="calcScreen" class="screen"><div class="shell"><div class="topbar"><div>ONE-MINUTE QUICK ESTIMATE</div><div class="badge">最後一關</div></div><div class="card calc-card"><div class="calc-head"><div><h2>1 分鐘快速試算</h2><p>先試算看看，快速了解不同金額與期間下的示意月付。</p></div><div class="reward-chip">完成再享 35 POINTS</div></div><div class="form-grid"><div class="field"><label for="purpose">資金用途</label><select id="purpose"><option>居家裝潢／修繕</option><option>進修／學習</option><option>家庭大額支出</option><option>設備／工具購置</option><option>其他資金規劃</option></select></div><div class="field"><label for="amount">希望試算金額（萬元）</label><input id="amount" type="number" min="10" max="300" step="5" value="50"></div><div class="field"><label for="months">預計還款期間</label><select id="months"><option value="24">24 個月</option><option value="36">36 個月</option><option value="48">48 個月</option><option value="60" selected>60 個月</option><option value="72">72 個月</option><option value="84">84 個月</option></select></div><div class="field"><label for="rate">示意年利率（Prototype）</label><select id="rate"><option value="3.5">3.5%</option><option value="5.5" selected>5.5%</option><option value="7.5">7.5%</option><option value="9.5">9.5%</option></select></div></div><div class="calc-actions"><button class="primary" id="calcBtn">查看試算結果</button><button class="secondary" id="backResultBtn">回到我的通關結果</button></div><div class="calc-result" id="calcResult"><div style="font-size:12px;color:#8b6c72;font-weight:900">每月預估還款</div><div class="big-number" id="monthlyPayment">—</div><div class="calc-meta"><div class="meta"><small>試算金額</small><b id="metaAmount">—</b></div><div class="meta"><small>期間</small><b id="metaMonths">—</b></div><div class="meta"><small>示意年利率</small><b id="metaRate">—</b></div></div><div class="reward-panel" style="margin-bottom:0">🎁 <strong>完成 1 分鐘快速試算，再享 35 點回饋資格！</strong></div>
+<div class="grand-prize-card">
+  <div class="grand-prize-eyebrow">FINAL BONUS · 再解鎖一個驚喜</div>
+
+  <div class="grand-prize-title">
+    完成正式申請並經核貸通過，再獲大獎抽獎資格！
+  </div>
+
+  <div class="grand-prize-text">
+    如果試算結果符合你的需求，可以再依實際情況進一步申請。
+    完成正式申請並核貸通過後，即可獲得活動大獎抽獎資格。
+  </div>
+
+  <div class="grand-prize-badge">
+    大獎內容、抽獎名額與活動辦法依正式活動公告為準
+  </div>
+</div><div class="disclaimer">本頁僅為活動 Prototype。試算採本息平均攤還公式與使用者選擇之「示意年利率」計算，不代表任何銀行實際核貸利率、額度、費用或授信結果；正式條件仍應依個別審核與活動公告為準。</div></div></div></div></div>
 <div id="toast" class="toast"></div>
 <script>
 const questions=[
